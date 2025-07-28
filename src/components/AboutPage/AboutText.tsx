@@ -1,29 +1,33 @@
 "use client";
 import Icons from "@/components/AboutPage/Icons"
-import { motion } from 'framer-motion';
+import { motion,Variants } from 'framer-motion';
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.3,
+        },
+    },
+};
+
+export const itemVariants: Variants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.6,
+            ease: 'easeInOut',
+        },
+    },
+};
 
 export default function AboutText() {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.3,
-            },
-        },
-    };
 
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut",
-            },
-        },
-    };
+
+
 
     return (
         <motion.div

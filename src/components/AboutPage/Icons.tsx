@@ -1,21 +1,11 @@
 "use client";
 import { motion } from 'framer-motion';
-
 import { FaTiktok, FaInstagram ,FaGithub } from 'react-icons/fa';
+import {itemVariants} from "@/components/AboutPage/AboutText";
 
 export default function AboutText() {
 
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut",
-            },
-        },
-    };
+
 
     return (
 
