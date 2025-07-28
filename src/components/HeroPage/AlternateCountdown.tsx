@@ -5,8 +5,6 @@ import NumberFlow from '@number-flow/react'
 import Confetti from 'react-confetti';
 import { useWindowSize } from 'react-use';
 import {useState} from "react";
-
-
 export default function AlternateCountdown(props: { toDate: Date }) {
     const [days, hours, minutes, seconds, isFinished] = useCountdown(props.toDate);
     const isClient = useIsClient();
@@ -25,7 +23,6 @@ export default function AlternateCountdown(props: { toDate: Date }) {
                     onConfettiComplete={() => setIsConfettiRunning(false)}
                     gravity={0.4}
                 />
-
                 <p className="text-xl font-medium md:text-4xl jumping-fix z-10 ">
                     🎉 Koniec odliczania, początek odpoczynku 🎉
                 </p>
@@ -47,29 +44,31 @@ export default function AlternateCountdown(props: { toDate: Date }) {
                     </div>
                     <div className="flex flex-col items-center">
                         <span className="text-4xl font-semibold md:text-5xl font-mono"><NumberFlow transformTiming={{ duration: 200, easing: 'ease-out' }} value={seconds}/></span>
-                        <span className="text-lg font-light  z-11 ">sekund</span>
+                        <span className="text-lg font-light  z-10">sekund</span>
                     </div>
                 </div>
             </>
         )
     ) : (
-        <div className="flex items-center gap-6 font-inter jumping-fix  z-10 min-h-32 ">
-            <div className="flex flex-col items-center">
-                <span className="text-3xl font-medium md:text-5xl">000</span>
-                <span className="text-base font-medium ">dni</span>
+        <>
+            <div className="flex items-center gap-6 font-lato jumping-fix  z-10 min-h-32 ">
+                <div className="flex flex-col items-center">
+                    <span className="text-4xl font-semibold md:text-5xl font-mono">000</span>
+                    <span className="text-lg font-light  z-10 ">dni</span>
+                </div>
+                <div className="flex flex-col items-center">
+                    <span className="text-4xl font-semibold md:text-5xl font-mono">00</span>
+                    <span className="text-lg font-light  z-10">godzin</span>
+                </div>
+                <div className="flex flex-col items-center">
+                    <span className="text-4xl font-semibold md:text-5xl font-mono">00</span>
+                    <span className="text-lg font-light  z-10">minut</span>
+                </div>
+                <div className="flex flex-col items-center">
+                    <span className="text-4xl font-semibold md:text-5xl font-mono">00</span>
+                    <span className="text-lg font-light  z-10">sekund</span>
+                </div>
             </div>
-            <div className="flex flex-col items-center">
-                <span className="text-3xl font-medium md:text-5xl">00</span>
-                <span className="text-base font-medium">godzin</span>
-            </div>
-            <div className="flex flex-col items-center">
-                <span className="text-3xl font-medium md:text-5xl">00</span>
-                <span className="text-base font-medium">minut</span>
-            </div>
-            <div className="flex flex-col items-center" suppressHydrationWarning>
-                <span className="text-3xl font-medium md:text-5xl">00</span>
-                <span className="text-base font-medium">sekund</span>
-            </div>
-        </div>
+        </>
     );
 }
