@@ -1,4 +1,12 @@
-export const winterBreakGroups = [
+export type WinterBreakGroup = {
+    id: string;
+    label: string;
+    date: Date;
+    title: string;
+    provinces: string;
+};
+
+export const winterBreakGroups: WinterBreakGroup[] = [
     {
         id: 'winter-group-1',
         label: 'ferii',

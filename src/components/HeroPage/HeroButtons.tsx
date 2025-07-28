@@ -3,7 +3,8 @@ import {useState} from "react";
 import {ChevronDown, ChevronUp,Snowflake} from "lucide-react";
 import AlternateCountdown from "@/components/HeroPage/AlternateCountdown";
 import { motion, AnimatePresence } from "framer-motion";
-import { winterBreakGroups, events } from '@/data'
+import {winterBreakGroups, events, WinterBreakGroup} from '@/data'
+
 
 export default function HeroButtons() {
     const [selectedEvent, setSelectedEvent] = useState(events[0]);
@@ -16,9 +17,8 @@ export default function HeroButtons() {
         setWinterMenuOpen(!isWinterMenuOpen);
     };
 
-    const handleWinterGroupSelect = (group: any) => {
+    const handleWinterGroupSelect = (group: WinterBreakGroup ) => {
         setSelectedEvent({
-            id: 'winter',
             ...group,
             Icon: Snowflake,
         });

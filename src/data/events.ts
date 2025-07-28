@@ -1,13 +1,20 @@
 import {Laugh, PartyPopper, TreePalm} from "lucide-react";
 import {getNextSylwester, getNextWeekend} from "@/lib/event-dates";
 
-const summerStart = new Date('2026-06-22');
+export type eventGroup = {
+    id: string;
+    label: string;
+    date: Date;
+    title: string;
+    provinces: string;
+};
+
 export const events = [
     {
         id: 'summer',
         label: 'wakacji',
         endLabel: 'końca wakacji',
-        date: summerStart,
+        date: new Date('2026-06-22T00:00:00'),
         Icon: TreePalm,
         title: 'Wakacje Letnie',
     },
