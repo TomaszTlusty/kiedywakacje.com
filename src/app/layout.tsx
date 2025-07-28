@@ -3,8 +3,8 @@ import {ThemeProvider} from "next-themes"
 import React from "react";
 
 export const metadata = {
-    title: 'Kiedy Wakacje?',
-    description: 'Odliczanie do zasłużonego odpoczynku od Szkoły',
+    title: 'Odliczanie do zasłużonego Odpoczynku - kiedywakacje.com',
+    description: 'Sprawdź wakacje, ferie, weekend, Sylwester. Ale tylko jeśli zasłużyłeś. Odpoczynek to luksus, nie prawo. STAY HARD.',
     keywords: [
         'Odliczanie', 'do', 'wakacji', 'końca', 'roku', 'szkolnego',
         'wakacje', 'wolne', 'odpoczynek', 'ferie', 'zimowe',
@@ -19,15 +19,15 @@ export const metadata = {
     },
     manifest: '/site.webmanifest',
     openGraph: {
-        title: 'Kiedywakacje.com - Odliczanie do wakacji!',
-        description: 'Ile jeszcze zostało wakacji? My wiemy! :)',
+        title: 'Odliczanie do zasłużonego Odpoczynku - kiedywakacje.com',
+        description: 'Sprawdź wakacje, ferie, weekend, Sylwester. Ale tylko jeśli zasłużyłeś. Odpoczynek to luksus, nie prawo. STAY HARD.',
         url: 'https://kiedywakacje.com/',
         siteName: 'Kiedy Wakacje',
         images: [
             {
                 url: '/android-chrome-192x192.png',
-                width: 1200,
-                height: 630,
+                width: 256,
+                height: 256,
                 alt: 'Zegar odliczający do wakacji',
             },
         ],
