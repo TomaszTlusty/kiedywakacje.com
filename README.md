@@ -8,7 +8,7 @@ Celem projektu jest szybkie i proste sprawdzenie, ile dni zostało do najbliższ
 Wejdź na [kiedywakacje.com](https://kiedywakacje.com) – daty i licznik pokażą się automatycznie.
 
 ## Technologie
-- Next.js / React
+- Next.js
 - TailwindCSS
 
 
