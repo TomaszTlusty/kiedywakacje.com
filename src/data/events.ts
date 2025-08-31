@@ -14,7 +14,7 @@ export const events = [
         id: 'summer',
         label: 'wakacji',
         endLabel: 'końca wakacji',
-        date: new Date('2025-09-01T00:00:00'),
+        date: new Date('2026-06-27T00:00:00'),
         Icon: TreePalm,
         title: 'Wakacje Letnie',
     },
