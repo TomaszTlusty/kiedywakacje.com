@@ -19,3 +19,7 @@ cd kiedywakacje.com
 npm install
 npm run dev
 ```
+#Podsumowanie Deweloperskie 
+Ostatni Raz Używam animowanego SVG na tło optymalizacja jest  koszmarna
+cały design mi nie odpowiada a responsywnosć pozostawia wiele do życzenia
+Projekt Wymaga lepszej wizji i designu bo na razie tylko funkcjonuje ok.
