@@ -5,7 +5,7 @@ import AlternateCountdown from "@/components/HeroPage/AlternateCountdown";
 import { motion, AnimatePresence } from "framer-motion";
 import {winterBreakGroups, events, WinterBreakGroup} from '@/data'
 import Link from "next/link";
-import {FaCalendarDays,FaArrowRight} from "react-icons/fa6";
+import {FaCalendarDays} from "react-icons/fa6";
 
 
 export default function HeroButtons() {
