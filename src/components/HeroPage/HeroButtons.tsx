@@ -4,6 +4,8 @@ import {ChevronDown, ChevronUp,Snowflake} from "lucide-react";
 import AlternateCountdown from "@/components/HeroPage/AlternateCountdown";
 import { motion, AnimatePresence } from "framer-motion";
 import {winterBreakGroups, events, WinterBreakGroup} from '@/data'
+import Link from "next/link";
+import {FaCalendarDays,FaArrowRight} from "react-icons/fa6";
 
 
 export default function HeroButtons() {
@@ -25,6 +27,13 @@ export default function HeroButtons() {
     };
     const isWinterSelected = selectedEvent.id.startsWith('winter');
 
+    const toGCalDate = (date: Date) => {
+        return date.toISOString().replace(/-|:|\.\d{3}/g, "");
+    };
+
+    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(selectedEvent.title)}&dates=${toGCalDate(selectedEvent.date)}/${toGCalDate(selectedEvent.date)}&details=${encodeURIComponent(selectedEvent.label ?? "")}`;
+
+
     return (
         <>
             <div className="border-none rounded-lg px-2 py-1 text-center z-10 transition-all font-lato">
@@ -34,6 +43,17 @@ export default function HeroButtons() {
                 <span className="text-lg font-semibold dark:text-white text-outline ">
                     <AlternateCountdown toDate={selectedEvent.date}/>
                 </span>
+
+                <Link
+                    href={googleCalendarUrl}
+                    target={"_blank"}
+                    className="flex items-center mt-2 gap-1.5 mx-auto font-lato font-medium text-2xl dark:text-gray-100 text-outline text-black w-fit transition-colors duration-150 group/link"
+                >
+                    <span>{selectedEvent.date.getDate()}.{selectedEvent.date.getMonth()}.{selectedEvent.date.getFullYear()} </span>
+
+                    <FaCalendarDays className="text-medium opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-150" />
+                </Link>
+
             </div>
             <div className="z-10 mt-2 flex flex-col justify-center items-center gap-4 transition-all duration-100">
                 <div className="flex flex-col justify-center items-center gap-4 lg:flex-row ">
@@ -79,7 +99,7 @@ export default function HeroButtons() {
                                 duration: 0.2,
                                 ease: [0.25, 0.8, 0.25, 1]
                             }}
-                            className="flex flex-col gap-3 mt-4 w-full font-lato overflow-hidden"
+                            className="flex flex-col gap-3 mt-4 w-full font-lato"
                         >
                             {winterBreakGroups.map((group) => (
                                 <button

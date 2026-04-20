@@ -5,6 +5,7 @@ import NumberFlow from '@number-flow/react'
 import Confetti from 'react-confetti';
 import { useWindowSize } from 'react-use';
 import {useState} from "react";
+import {motion} from "framer-motion";
 export default function AlternateCountdown(props: { toDate: Date }) {
     const [days, hours, minutes, seconds, isFinished] = useCountdown(props.toDate);
     const isClient = useIsClient();
