@@ -25,7 +25,7 @@ export default async function ArticlePage({ params }: Props) {
                         <h1 className="text-4xl font-semibold">{article.title}</h1>
                         <h2 className="text-2xl">{article.readTime} min | {article.date}</h2>
                     </header>
-                    <div className="prose prose-lg dark:prose-invert dark:bg-black max-w-3xl w-full mt-8 z-10 dark:text-white text-black bg-white/2 backdrop-blur-xl p-6 rounded-3xl border border-yellow-600 dark:border-blue-600 ">
+                    <div className="prose prose-lg dark:prose-invert dark:bg-black max-w-3xl w-full mt-8 z-10 dark:text-white text-black bg-white/2 backdrop-blur-xl p-6 rounded-3xl border border-yellow-200 dark:border-blue-600 ">
                         <ReactMarkdown>
                             {article.content}
                         </ReactMarkdown>
