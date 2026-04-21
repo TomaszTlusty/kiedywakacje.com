@@ -5,7 +5,7 @@ export default function AnimatedBackground() {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1024 768"
             preserveAspectRatio="xMidYMid meet"
-            className="absolute left-0 sm:left-13 right-0 top-6 w-full h-full z-0 pointer-events-none invert-0 dark:invert transition  display:inline;fill:#000000; fill-opacity:0; stroke:#000000;stroke-width:1.04885;stroke-opacity:1"
+            className="absolute left-0 sm:left-13 right-0 top-6 overflow-hidden w-full h-screen z-0 pointer-events-none invert-0 dark:invert transition  display:inline;fill:#000000; fill-opacity:0; stroke:#000000;stroke-width:1.04885;stroke-opacity:1"
             transform="sm:scale(1.1) scale(0.8)"
         >
 

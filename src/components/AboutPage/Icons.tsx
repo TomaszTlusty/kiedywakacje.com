@@ -1,7 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import {itemVariants} from "@/components/AboutPage/AboutText";
-import {FaLinkedin,FaGithub } from "react-icons/fa6";
+import {FaLinkedin, FaGithub, FaXTwitter} from "react-icons/fa6";
 
 export default function AboutText() {
 
@@ -12,7 +12,7 @@ export default function AboutText() {
             <motion.footer variants={itemVariants} className="mt-4">
                 <div className="flex items-center justify-center gap-6">
                     <a
-                        href="https://www.linkedin.com/in/tomasz-t%C5%82usty-98332b301/"
+                        href="https://www.linkedin.com/in/tlusty/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Twitter profile"
@@ -29,6 +29,16 @@ export default function AboutText() {
                         className="text-black transition-transform duration-200 hover:scale-110 hover:text-gray-700 dark:text-white dark:hover:text-gray-400"
                     >
                         <FaGithub size={32} />
+                    </a>
+
+                    <a
+                        href="https://x.com/FarciarzYT"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Twitter profile"
+                        className="text-black transition-transform duration-200 hover:scale-110 hover:text-gray-700 dark:text-white dark:hover:text-gray-400"
+                    >
+                        <FaXTwitter size={32} />
                     </a>
                 </div>
             </motion.footer>

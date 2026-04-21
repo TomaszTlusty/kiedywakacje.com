@@ -27,7 +27,7 @@ export const itemVariants: Variants = {
 export default function AboutText() {
     return (
         <motion.div
-            className="z-10 flex flex-col items-center gap-12 text-center font-Inter"
+            className="z-10 flex flex-col items-center gap-6 text-center font-Inter"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -56,7 +56,6 @@ export default function AboutText() {
                     zrobiłem stronę. Dla siebie, a potem dla was.
                 </p>
             </motion.section>
-
             <Icons />
         </motion.div>
     );

@@ -1,15 +1,17 @@
 import {Laugh, PartyPopper, TreePalm} from "lucide-react";
 import {getNextSylwester, getNextWeekend} from "@/lib/event-dates";
+import {IconType} from "react-icons";
 
 export type eventGroup = {
     id: string;
     label: string;
+    endLabel: string;
     date: Date;
+    Icon: IconType;
     title: string;
-    provinces: string;
 };
 
-export const events = [
+export const events:eventGroup[] = [
     {
         id: 'summer',
         label: 'wakacji',
@@ -21,6 +23,7 @@ export const events = [
     {
         id: 'newYear',
         label: 'sylwestra',
+        endLabel: 'końca sylwestra',
         date: getNextSylwester(),
         Icon: PartyPopper,
         title: 'Sylwester',
@@ -28,6 +31,7 @@ export const events = [
     {
         id: 'weekend',
         label: 'weekendu',
+        endLabel: 'końca weekendu',
         date: getNextWeekend(),
         Icon: Laugh,
         title: 'Najbliższy Weekend',

@@ -14,7 +14,7 @@ export default function HeroButtons() {
 
     const handleWinterButtonClick = () => {
         if (!isWinterMenuOpen) {
-            setSelectedEvent({...winterBreakGroups[0], Icon: Snowflake});
+            setSelectedEvent({endLabel: "", ...winterBreakGroups[0], Icon: Snowflake});
         }
         setWinterMenuOpen(!isWinterMenuOpen);
     };
@@ -22,7 +22,7 @@ export default function HeroButtons() {
     const handleWinterGroupSelect = (group: WinterBreakGroup ) => {
         setSelectedEvent({
             ...group,
-            Icon: Snowflake,
+            Icon: Snowflake, endLabel: ""
         });
     };
     const isWinterSelected = selectedEvent.id.startsWith('winter');
@@ -99,7 +99,7 @@ export default function HeroButtons() {
                                 duration: 0.2,
                                 ease: [0.25, 0.8, 0.25, 1]
                             }}
-                            className="flex flex-col gap-3 mt-4 w-full font-lato"
+                            className="flex flex-col gap-3 mt-4 w-full font-lato mb-16"
                         >
                             {winterBreakGroups.map((group) => (
                                 <button
