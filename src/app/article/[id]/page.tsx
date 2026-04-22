@@ -22,8 +22,8 @@ export default async function ArticlePage({ params }: Props) {
             <main className="flex flex-col items-center justify-center px-4 pt-32 text-black dark:text-white min-h-screen scroll-auto z-10">
                 <article className="flex flex-col items-center justify-center px-4 dark:bg-black bg-white text-black dark:text-white ">
                     <header className="text-2xl w-full max-w-2xl z-10 text-outline text-outline text-center font-lato select-none pt-6">
-                        <h1 className="text-4xl font-semibold">{article.title}</h1>
-                        <h2 className="text-2xl">{article.readTime} min | {article.date}</h2>
+                        <h3 className="text-4xl font-semibold">{article.title}</h3>
+                        <h4 className="text-2xl">{article.readTime} min | {article.date}</h4>
                     </header>
                     <div className="prose prose-lg dark:prose-invert dark:bg-black max-w-3xl w-full mt-8 z-10 dark:text-white text-black bg-white/2 backdrop-blur-xl p-6 rounded-3xl border border-yellow-200 dark:border-blue-600 ">
                         <ReactMarkdown>

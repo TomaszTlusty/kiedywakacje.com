@@ -49,7 +49,7 @@ export default function HeroButtons() {
                     target={"_blank"}
                     className="flex items-center mt-2 gap-1.5 mx-auto font-lato font-medium text-2xl dark:text-gray-100 text-outline text-black w-fit transition-colors duration-150 group/link"
                 >
-                    <span>{selectedEvent.date.getDate()}.{selectedEvent.date.getMonth()}.{selectedEvent.date.getFullYear()} </span>
+                    <span>{selectedEvent.date.getDate()}.{selectedEvent.date.getMonth()+1}.{selectedEvent.date.getFullYear()} </span>
 
                     <FaCalendarDays className="text-medium transition-all duration-150" />
                 </Link>
@@ -67,7 +67,9 @@ export default function HeroButtons() {
                             }}
                             whileHover={{scale: 1.05}}
                             whileTap={{scale: 0.95}}
-                            className={`flex items-center text-clip justify-center gap-2 px-6 cursor-pointer py-3 font-lato font-semibold rounded-3xl border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-black min-w-54 border-yellow-300 text-black hover:bg-yellow-300 hover:text-black focus:ring-yellow-300 dark:border-blue-600 dark:text-white dark:hover:bg-blue-600 dark:hover:text-white dark:focus:ring-blue-600 ${selectedEvent.id === event.id ? 'bg-yellow-300 text-black dark:bg-blue-600 dark:text-white' : 'bg-gray-100 dark:bg-gray-800  hover:bg-gray-200 dark:hover:bg-gray-700'}`}>
+                            className={`flex items-center text-clip justify-center gap-2 px-6 cursor-pointer py-3 font-lato font-semibold rounded-3xl border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-black min-w-54 border-yellow-300 text-black focus:ring-yellow-300 dark:border-blue-600 dark:text-white dark:focus:ring-blue-600 ${selectedEvent.id === event.id
+                                ? 'bg-yellow-300 text-black dark:bg-blue-600 dark:text-white'
+                                : 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white'}`}>
                             <event.Icon size={20}/>
                             <span>{event.title}</span>
                         </motion.button>
@@ -78,12 +80,13 @@ export default function HeroButtons() {
                         onClick={handleWinterButtonClick}
                         whileHover={{scale: 1.05}}
                         whileTap={{scale: 0.95}}
-                        className={`flex items-center justify-center cursor-pointer gap-2 px-6 py-3 font-lato font-semibold rounded-3xl border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-black min-w-54 border-yellow-300 text-black hover:bg-yellow-300 hover:text-black focus:ring-yellow-300 dark:border-blue-600 dark:text-white dark:hover:bg-blue-600 dark:hover:text-white dark:focus:ring-blue-600 ${isWinterSelected ? 'bg-yellow-300 text-black dark:bg-blue-600 dark:text-white' : 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'}`}>
+                        className={`flex items-center justify-center cursor-pointer gap-2 px-6 py-3 font-lato font-semibold rounded-3xl border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-black min-w-54 border-yellow-300 text-black focus:ring-yellow-300 dark:border-blue-600 dark:text-white dark:focus:ring-blue-600 ${isWinterSelected
+                            ? 'bg-yellow-300 text-black dark:bg-blue-600 dark:text-white'
+                            : 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white'}`}>
                         <Snowflake size={20}/>
                         <span>Ferie Zimowe</span>
                         {isWinterMenuOpen ? <ChevronUp size={20}/> : <ChevronDown size={20}/>}
                     </motion.button>
-
 
                 </div>
                 {/*Winter Break Dropdown*/}
@@ -108,7 +111,7 @@ export default function HeroButtons() {
                                     onClick={() => handleWinterGroupSelect(group)}
                                     className={`p-4 rounded-lg font-lato text-left w-full cursor-pointer hover:translate-x-1 hover:-translate-y-1 transition-all duration-300 ${
                                         selectedEvent.date.getTime() === group.date.getTime()
-                                            ? 'bg-yellow-200 dark:bg-blue-800'
+                                            ? 'bg-yellow-300 dark:bg-blue-600'
                                             : 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
                                     }`}
                                 >

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
                 url: '/og-image.png', //need to make thi one ... later
                 width: 1200,
                 height: 630,
-                alt: 'Odliczanie do wakacji – kiedywakacje.com',
+                alt: 'Kiedywakacje.com - Odliczanie do wakacji!',
             },
         ],
         type: 'website',

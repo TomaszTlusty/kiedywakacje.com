@@ -17,13 +17,19 @@ export function HomeToggle() {
             title="about page"
             variant="outline"
             size="icon"
-            className="rounded-full mt-4 absolute top-4 right-16 z-20 transition-all duration-300 cursor-pointer"
+            className="rounded-3xl mt-4 px-10 absolute top-4 right-16 z-20 transition-all duration-300 cursor-pointer "
             onClick={handleToggle}
         >
             {isHome ? (
-                <FaCircleInfo className="h-5 w-5" />
+                <>
+                    <span>Info</span>
+                    <FaCircleInfo className="h-5 w-5" />
+                </>
             ) : (
-                <FaHouse className="h-5 w-5" />
+                <>
+                    <span>Powrót</span>
+                    <FaHouse className="h-5 w-5" />
+                </>
             )}
         </Button>
     );
