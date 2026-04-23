@@ -31,7 +31,11 @@ export default function HeroButtons() {
         return date.toISOString().replace(/-|:|\.\d{3}/g, "");
     };
 
-    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(selectedEvent.title)}&dates=${toGCalDate(selectedEvent.date)}/${toGCalDate(selectedEvent.date)}&details=${encodeURIComponent(selectedEvent.label ?? "")}`;
+    let title;
+    if (winterBreakGroups.some(event => event.title === selectedEvent.title)) title = "Ferie Zimowe";
+    else title = encodeURIComponent(selectedEvent.title);
+
+    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${toGCalDate(selectedEvent.date)}/${toGCalDate(selectedEvent.date)}&details=${encodeURIComponent(selectedEvent.label ?? "")}`;
 
 
     return (
