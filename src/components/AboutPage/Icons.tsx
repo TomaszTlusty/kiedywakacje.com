@@ -14,12 +14,12 @@ export default function AboutText() {
         },
         {
             label: "GitHub",
-            href: "https://github.com/FarciarzYT",
+            href: "https://github.com/TomaszTlusty",
             icon: FaGithub,
         },
         {
             label: "Twitter / X",
-            href: "https://x.com/FarciarzYT",
+            href: "https://x.com/TlustyTomasz",
             icon: FaXTwitter,
         },
     ];

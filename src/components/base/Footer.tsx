@@ -7,7 +7,7 @@ export default function Footer() {
     const socials = [
         {
             label: "GitHub",
-            href: "https://github.com/FarciarzYT",
+            href: "https://github.com/TomaszTlusty",
             icon: FaGithub,
         },
         {
@@ -17,7 +17,7 @@ export default function Footer() {
         },
         {
             label: "Twitter / X",
-            href: "https://x.com/FarciarzYT",
+            href: "https://x.com/TlustyTomasz",
             icon: FaXTwitter,
         },
     ];
