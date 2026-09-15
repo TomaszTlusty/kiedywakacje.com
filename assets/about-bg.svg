@@ -1,20 +1,19 @@
-export default function AnimatedBackground() {
-    return (
-        <svg
+<svg width="1024" height="768"
             id="light_background"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1024 768"
             preserveAspectRatio="xMidYMid meet"
-            className="absolute left-0 sm:left-13 right-0 top-6 overflow-hidden w-full h-screen z-0 pointer-events-none invert-0 dark:invert transition  display:inline;fill:#000000; fill-opacity:0; stroke:#000000;stroke-width:1.04885;stroke-opacity:1"
-            transform="sm:scale(1.1) scale(0.8)"
         >
+<style>
+  path { fill:none; stroke:#000; stroke-width:1.4; stroke-linecap:round; stroke-opacity:.55; }
+</style>
 
                     <g
                         id="sun1"
                          
                         fill="none"
                         stroke="black"
-                        strokeWidth={1}
+                        stroke-width="1"
                            
                     >
                         <path
@@ -244,7 +243,7 @@ export default function AnimatedBackground() {
                          
                         fill="none"
                         stroke="black"
-                        strokeWidth={1}
+                        stroke-width="1"
                            
                      >
                         <path
@@ -2457,7 +2456,7 @@ export default function AnimatedBackground() {
                          
                         fill="none"
                         stroke="black"
-                        strokeWidth={1}
+                        stroke-width="1"
                           >
                         <path
                              
@@ -3121,7 +3120,7 @@ export default function AnimatedBackground() {
                          
                         fill="none"
                         stroke="black"
-                        strokeWidth={1}
+                        stroke-width="1"
                      >
                         <path
                              
@@ -3133,7 +3132,7 @@ export default function AnimatedBackground() {
                          
                         fill="none"
                         stroke="black"
-                        strokeWidth={1}
+                        stroke-width="1"
                           
                      >
                         <path
@@ -4102,4 +4101,3 @@ export default function AnimatedBackground() {
                             id="path1" />
                      </g>
             </svg>
-    )}

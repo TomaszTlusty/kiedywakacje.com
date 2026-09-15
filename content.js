@@ -1,27 +1,11 @@
-import {
-    getNextSylwester,
-    getNextChristmas,
-    getNextEaster,
-    getNextMajowka,
-    getNextMatura,
-    getNextEgzaminOsmoklasisty,
-    getNextDlugiWeekend,
-} from '@/lib/event-dates';
-import { events } from './events';
-import { winterBreakGroups } from './WinterBreakGroups';
+// Treść stron wydarzeń i artykułów (markdown). Build-time only.
+const {
+    events, winterBreakGroups,
+    getNextSylwester, getNextChristmas, getNextEaster, getNextMajowka,
+    getNextMatura, getNextEgzaminOsmoklasisty, getNextDlugiWeekend,
+} = require('./data.js');
 
-export type EventPage = {
-    slug: string;
-    h1: string;
-    label: string;
-    date: Date;
-    breadcrumbLabel: string;
-    metaTitle: string;
-    metaDescription: string;
-    content: string;
-};
-
-const summerDate = events.find(e => e.id === 'summer')!.date;
+const summerDate = events.find(e => e.id === 'summer').date;
 const winterDate = winterBreakGroups[0].date;
 const sylwesterDate = getNextSylwester();
 const christmasDate = getNextChristmas();
@@ -31,7 +15,7 @@ const maturaDate = getNextMatura();
 const egzaminDate = getNextEgzaminOsmoklasisty();
 const dlugiWeekendDate = getNextDlugiWeekend();
 
-export const eventPages: EventPage[] = [
+const eventPages = [
     {
         slug: 'wakacje',
         h1: 'Ile dni do wakacji letnich?',
@@ -123,3 +107,5 @@ export const eventPages: EventPage[] = [
         content: `Długi weekend w Polsce to każda sytuacja, gdy dzień ustawowo wolny od pracy lub nauki wypada blisko weekendu, tworząc kilkudniową przerwę. Polskie prawo przewiduje kilkanaście świąt państwowych i kościelnych — Wszystkich Świętych, Święto Niepodległości, Boże Ciało czy Wniebowzięcie NMP — które regularnie tworzą takie okazje.\n\nNajbliższy długi weekend w ${dlugiWeekendDate.getFullYear()} roku to idealna okazja na krótki wyjazd za miasto, odwiedziny rodziny lub po prostu dłuższy odpoczynek od codziennych obowiązków. Sprawdź powyżej, ile dokładnie czasu pozostało.`,
     },
 ];
+
+module.exports = { eventPages };
