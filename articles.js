@@ -1,17 +1,12 @@
-import {FaTent} from "react-icons/fa6";
-import {FaMapMarkedAlt} from "react-icons/fa";
-import {TbTargetArrow} from "react-icons/tb";
-
-type Article = { id: string; title: string; description: string; date: string; readTime: string; emoji: React.ComponentType<{ size?: number; className?: string }>; content: string; };
-
-const articles: Article[] = [
+// Artykuły (treść w markdown). Build-time only.
+const articles = [
     {
         id: '10-miejsc-na-wakacje',
         title: '10 miejsc w Polsce, które warto odwiedzić w te wakacje',
         description: 'Nie wiesz gdzie jechać? Oto 10 sprawdzonych miejsc w Polsce na letni wyjazd.',
         date: '2025-06-01',
         readTime: '4 min',
-        emoji: FaTent,
+        icon: 'fa-solid fa-tent',
         content: `
 **Polska ma więcej do zaoferowania niż myślisz**
 
@@ -49,7 +44,7 @@ Każde z tych miejsc ma swój klimat. Wybór zależy od tego, czego szukasz.
         description: 'Pomysły na wakacje od prostych rzeczy po większe przygody.',
         date: '2025-06-10',
         readTime: '3 min',
-        emoji: FaMapMarkedAlt,
+        icon: 'fa-solid fa-map-location-dot',
         content: `
 **Wakacje to coś więcej niż leżenie**
 
@@ -91,7 +86,7 @@ Nie musisz robić wszystkiego. Wystarczy kilka rzeczy, które zapamiętasz.
         description: 'Pomysły na wakacje bez względu na budżet.',
         date: '2025-06-15',
         readTime: '5 min',
-        emoji: TbTargetArrow,
+        icon: 'fa-solid fa-bullseye',
         content: `
 **Nuda to raczej wybór**
 
@@ -136,4 +131,4 @@ Nie chodzi o ilość. Chodzi o to, żeby coś miało sens.
         `,
     },
 ];
-export default articles;
+module.exports = { articles };

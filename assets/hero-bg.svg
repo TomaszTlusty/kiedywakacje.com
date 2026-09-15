@@ -1,20 +1,19 @@
-export default function AnimatedBackground() {
-    return (
-        <svg
+<svg width="1024" height="768"
             id="light_background"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1024 768"
             preserveAspectRatio="xMidYMid meet"
-            className="absolute top-0 left-0 sm:w-full  h-full w-full z-0 invert-0 dark:invert pointer-events-none"
-            transform="sm:scale(1.2)"
 
         >
-            {/* Mountains */}
+<style>
+  path { fill:none; stroke:#000; stroke-width:1.4; stroke-linecap:round; stroke-opacity:.55; }
+</style>
+            <!-- Mountains -->
             <g
                 id="mountains"
                 fill="none"
                 stroke="black"
-                strokeWidth={1}
+                stroke-width="1"
 
             >
                 <path
@@ -167,12 +166,11 @@ export default function AnimatedBackground() {
                     id="path130" />
 
             </g>
-            {/*Moon*/}
+            <!--Moon-->
             <g
                 id="moon"
                 fill="black"
                 stroke="#eaa203"
-                className="z-0 hidden dark:block"
             >
                 <path
                         
@@ -299,12 +297,11 @@ export default function AnimatedBackground() {
                     id="path167" />
             </g>
 
-            {/* Sun */}
+            <!-- Sun -->
             <g
                 id="sun"
                 fill="black"
                 stroke="#eaa203"
-                className="z-0 block dark:hidden"
             >
                 <path
 
@@ -532,7 +529,7 @@ export default function AnimatedBackground() {
                     id="path161" />
         </g>
 
-            {/* Sunbed */}
+            <!-- Sunbed -->
             <g
                 id="sunbed"
                 fill="black"
@@ -841,12 +838,12 @@ export default function AnimatedBackground() {
 
             </g>
 
-            {/* Water */}
+            <!-- Water -->
             <g
                 id="water"
                 fill="none"
                 stroke="black"
-                strokeWidth={0.5}
+                stroke-width="0.5"
             >
                 <path
 
@@ -1039,5 +1036,3 @@ export default function AnimatedBackground() {
 
             </g>
         </svg>
-    );
-}

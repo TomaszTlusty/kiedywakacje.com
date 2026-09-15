@@ -1,45 +1,10 @@
 {
-  "name": "kiedygoggins",
-  "version": "0.1.0",
+  "name": "kiedywakacje",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@number-flow/react": "^0.5.10",
-    "@radix-ui/react-slot": "^1.2.3",
-    "@tailwindcss/typography": "^0.5.19",
-    "@vercel/analytics": "^1.5.0",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "framer-motion": "^12.23.11",
-    "gsap": "^3.13.0",
-    "lucide-react": "^0.525.0",
-    "next": "^16.2.4",
-    "next-themes": "^0.4.6",
-    "pnpm": "^10.33.0",
-    "react": "^19.0.0",
-    "react-confetti": "^6.4.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0",
-    "react-markdown": "^10.1.0",
-    "react-use": "^17.6.0",
-    "tailwind-merge": "^3.3.1",
-    "usehooks-ts": "^3.1.1"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.5",
-    "tailwindcss": "^4",
-    "tw-animate-css": "^1.3.5",
-    "typescript": "^5"
+    "build": "node build.js",
+    "test": "node build.js --check",
+    "dev": "node build.js && npx --yes serve dist"
   }
 }

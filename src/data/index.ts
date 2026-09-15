@@ -1,7 +1,0 @@
-export {winterBreakGroups} from './WinterBreakGroups'
-export type { WinterBreakGroup } from './WinterBreakGroups'
-export { events } from './events'
-export { eventPages } from './event-pages'
-export type { EventPage } from './event-pages'
-export { faqs } from './faq'
-export type { FAQItem } from './faq'
