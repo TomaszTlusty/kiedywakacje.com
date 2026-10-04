@@ -19,7 +19,7 @@ export default function AboutText() {
         },
         {
             label: "Twitter / X",
-            href: "https://x.com/TlustyTomasz",
+            href: "https://x.com/TlustyTech",
             icon: FaXTwitter,
         },
     ];
